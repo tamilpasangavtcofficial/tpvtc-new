@@ -1,0 +1,23 @@
+[[redirects]]
+  from = "/api/vtc/:id"
+  to = "/.netlify/functions/vtc/:id"
+  status = 200
+  force = true
+  
+[[redirects]]
+  from = "/api/vtc/:id/events"
+  to = "/.netlify/functions/vtc/:id/events"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/vtc/:id/events/attending"
+  to = "/.netlify/functions/vtc/:id/events/attending"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/vtc/:id/members"
+  to = "/.netlify/functions/vtc/:id/members"
+  status = 200
+  force = true

@@ -1,0 +1,186 @@
+/* Glass & Space Recognition Design */
+.hub-recognition-page {
+  animation: fadeInSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hub-alert {
+  padding: 20px 24px;
+  border-radius: 16px;
+  margin-bottom: 32px;
+  font-weight: 400;
+  font-size: 0.95rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.hub-alert.success {
+  background: rgba(34, 197, 94, 0.05);
+  color: #4ade80;
+  border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.hub-alert.error {
+  background: rgba(239, 68, 68, 0.05);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.publish-toggle {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--glass-border) !important;
+  border-radius: 12px;
+  color: var(--glass-text-muted);
+  font-size: 0.85rem;
+  font-weight: 300;
+}
+
+/* Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: .4s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 3px;
+  background-color: var(--glass-text-muted);
+  transition: .4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+input:checked + .slider {
+  background-color: rgba(59, 130, 246, 0.2);
+  border-color: var(--glass-accent);
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+  background-color: var(--glass-accent);
+  box-shadow: 0 0 10px var(--glass-accent);
+}
+
+.slider.round {
+  border-radius: 24px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.performer-block {
+  padding: 32px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 20px;
+  border: 1px solid var(--glass-border);
+  margin-bottom: 24px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.performer-block:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.performer-block:last-child {
+  margin-bottom: 0;
+}
+
+.performer-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-bottom: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  letter-spacing: 1px;
+}
+
+.readonly-input {
+  background: rgba(0, 0, 0, 0.2) !important;
+  color: var(--glass-text-muted) !important;
+  cursor: not-allowed;
+  border-color: transparent !important;
+}
+
+.flex-1 { flex: 1; }
+.flex-2 { flex: 2; }
+
+/* Customizing inputs inside recognition form to match Glass theme */
+.hub-input-group select,
+.hub-input-group input {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--glass-border);
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.3s;
+}
+
+.hub-input-group select:focus,
+.hub-input-group input:focus {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--glass-accent);
+  outline: none;
+}
+
+.hub-input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.75rem;
+  color: var(--glass-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.form-actions {
+  margin-top: 32px;
+}
+
+.hub-btn-primary.h-lg {
+  height: 60px;
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  color: #fff;
+  transition: all 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border-radius: 16px;
+}
+
+.hub-btn-primary.h-lg:hover:not(:disabled) {
+  background: rgba(59, 130, 246, 0.2);
+  border-color: var(--glass-accent);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+  transform: translateY(-2px);
+}

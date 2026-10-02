@@ -1,0 +1,74 @@
+.hub-partners-page {
+  animation: fadeIn 0.3s ease;
+}
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.partner-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.partner-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.partner-type-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.partner-header h3 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 0 0 0.25rem;
+}
+
+.vtc-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--accent-cyan, #22d3ee);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.vtc-link:hover {
+  text-decoration: underline;
+}
+
+.partner-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.partner-desc {
+  font-size: 0.85rem;
+  color: #a3a3a3;
+  line-height: 1.5;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.hub-modal.large {
+  max-width: 600px;
+}

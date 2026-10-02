@@ -349,6 +349,8 @@
 .btn-back-events:hover {
   color: #fff;
 }
+
+.event-badges-wrapper {
   display: flex;
   gap: 1rem;
   margin-bottom: 1rem;
@@ -887,78 +889,76 @@
   .event-banner-overlay { padding: 2rem; }
 }
 
- / *   I m a g e   P r e v i e w   M o d a l   * / 
- . i m a g e - p r e v i e w - m o d a l   { 
-     z - i n d e x :   9 9 9 9 ; 
-     d i s p l a y :   f l e x ; 
-     a l i g n - i t e m s :   c e n t e r ; 
-     j u s t i f y - c o n t e n t :   c e n t e r ; 
-     p a d d i n g :   2 r e m ; 
-     b a c k g r o u n d :   r g b a ( 0 ,   0 ,   0 ,   0 . 9 ) ; 
-     b a c k d r o p - f i l t e r :   b l u r ( 8 p x ) ; 
- } 
- 
- . i m a g e - p r e v i e w - c o n t e n t   { 
-     p o s i t i o n :   r e l a t i v e ; 
-     m a x - w i d t h :   9 0 v w ; 
-     m a x - h e i g h t :   9 0 v h ; 
-     d i s p l a y :   f l e x ; 
-     f l e x - d i r e c t i o n :   c o l u m n ; 
-     a l i g n - i t e m s :   c e n t e r ; 
-     g a p :   1 . 5 r e m ; 
- } 
- 
- . f u l l - p r e v i e w - i m g   { 
-     m a x - w i d t h :   1 0 0 % ; 
-     m a x - h e i g h t :   c a l c ( 9 0 v h   -   1 0 0 p x ) ; 
-     o b j e c t - f i t :   c o n t a i n ; 
-     b o r d e r - r a d i u s :   1 2 p x ; 
-     b o x - s h a d o w :   0   2 5 p x   5 0 p x   r g b a ( 0 , 0 , 0 , 0 . 5 ) ; 
-     b o r d e r :   1 p x   s o l i d   r g b a ( 2 5 5 , 2 5 5 , 2 5 5 , 0 . 1 ) ; 
- } 
- 
- . b t n - c l o s e - p r e v i e w   { 
-     p o s i t i o n :   a b s o l u t e ; 
-     t o p :   - 4 0 p x ; 
-     r i g h t :   - 4 0 p x ; 
-     b a c k g r o u n d :   t r a n s p a r e n t ; 
-     b o r d e r :   n o n e ; 
-     c o l o r :   # f f f ; 
-     f o n t - s i z e :   2 . 5 r e m ; 
-     c u r s o r :   p o i n t e r ; 
-     l i n e - h e i g h t :   1 ; 
-     o p a c i t y :   0 . 7 ; 
-     t r a n s i t i o n :   o p a c i t y   0 . 2 s ; 
- } 
- 
- . b t n - c l o s e - p r e v i e w : h o v e r   { 
-     o p a c i t y :   1 ; 
- } 
- 
- . b t n - d o w n l o a d - i m g   { 
-     d i s p l a y :   f l e x ; 
-     a l i g n - i t e m s :   c e n t e r ; 
-     g a p :   1 0 p x ; 
-     b a c k g r o u n d :   v a r ( - - a c c e n t - b l u e ) ; 
-     c o l o r :   # f f f ; 
-     p a d d i n g :   1 2 p x   2 4 p x ; 
-     b o r d e r - r a d i u s :   8 p x ; 
-     t e x t - d e c o r a t i o n :   n o n e ; 
-     f o n t - w e i g h t :   8 0 0 ; 
-     l e t t e r - s p a c i n g :   1 p x ; 
-     t r a n s i t i o n :   b a c k g r o u n d   0 . 2 s ; 
- } 
- 
- . b t n - d o w n l o a d - i m g : h o v e r   { 
-     b a c k g r o u n d :   v a r ( - - a c c e n t - c y a n ) ; 
-     c o l o r :   # f f f ; 
- } 
- 
- @ m e d i a   ( m a x - w i d t h :   7 6 8 p x )   { 
-     . b t n - c l o s e - p r e v i e w   { 
-         t o p :   - 4 0 p x ; 
-         r i g h t :   0 ; 
-     } 
- } 
-  
- 
+/* Image Preview Modal */
+.image-preview-modal {
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(8px);
+}
+
+.image-preview-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.full-preview-img {
+  max-width: 100%;
+  max-height: calc(90vh - 100px);
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.btn-close-preview {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 2.5rem;
+  cursor: pointer;
+  line-height: 1;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.btn-close-preview:hover {
+  opacity: 1;
+}
+
+.btn-download-img {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--accent-blue);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: 1px;
+  transition: background 0.2s;
+}
+
+.btn-download-img:hover {
+  background: var(--accent-cyan);
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .btn-close-preview {
+    top: -40px;
+    right: 0;
+  }
+}

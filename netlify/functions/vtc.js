@@ -1,4 +1,4 @@
-exports.handler = async function handler(event) {
+export const handler = async function handler(event) {
   const reqId = Math.random().toString(36).slice(2, 8)
   try {
     const path = event.path || ''

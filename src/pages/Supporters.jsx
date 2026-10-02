@@ -24,7 +24,8 @@ const Supporters = () => {
       }
 
       try {
-        const response = await fetch('/api/supporters');
+        const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+        const response = await fetch(`${API_URL}/supporters`);
         const data = await response.json();
         if (Array.isArray(data)) {
           const uniqueSupportersMap = new Map();

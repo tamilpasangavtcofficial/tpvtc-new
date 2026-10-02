@@ -24,7 +24,8 @@ const Partners = () => {
       }
 
       try {
-        const response = await fetch('/api/partners');
+        const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+        const response = await fetch(`${API_URL}/partners`);
         const data = await response.json();
         const validData = Array.isArray(data) ? data : [];
         setPartners(validData);
